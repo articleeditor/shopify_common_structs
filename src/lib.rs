@@ -64,7 +64,7 @@ pub struct Image {
 #[allow(non_snake_case)]
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Product {
-    pub availablePublicationCount: i32,
+    // pub availablePublicationCount: i32,
     // pub contextualPricing: ProductContextualPricing,
     pub createdAt: String,
     pub defaultCursor: String,
