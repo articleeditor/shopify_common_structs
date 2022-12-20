@@ -54,9 +54,9 @@ pub struct Metafield {
 #[allow(non_snake_case)]
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Image {
-    pub altText: String,
+    pub altText: Option<String>,
     pub height: Option<i32>,
-    pub id: String,
+    pub id: Option<String>,
     pub url: String,
     pub width: Option<i32>,
 }
