@@ -65,7 +65,7 @@ pub struct Image {
 #[derive(Deserialize, Serialize, Debug)]
 pub struct Product {
     pub availablePublicationCount: i32,
-    pub contextualPricing: ProductContextualPricing,
+    // pub contextualPricing: ProductContextualPricing,
     pub createdAt: String,
     pub defaultCursor: String,
     pub description: String,
@@ -74,4 +74,10 @@ pub struct Product {
     pub id: String,
     pub title: String,
     pub handle: String,
+}
+
+#[derive(Deserialize, Serialize, Debug)]
+pub struct Edge<T> {
+    pub node: T,
+    pub cursor: String,
 }
