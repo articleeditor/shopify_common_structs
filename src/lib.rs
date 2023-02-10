@@ -53,7 +53,7 @@ pub struct Metafield {
 
 #[allow(non_snake_case)]
 #[derive(Deserialize, Serialize, Debug)]
-pub struct Image {
+pub struct ShopifyImage {
     pub altText: Option<String>,
     pub height: Option<i32>,
     pub id: Option<String>,
@@ -63,14 +63,14 @@ pub struct Image {
 
 #[allow(non_snake_case)]
 #[derive(Deserialize, Serialize, Debug)]
-pub struct Product {
+pub struct ShopifyProduct {
     // pub availablePublicationCount: i32,
     // pub contextualPricing: ProductContextualPricing,
     pub createdAt: String,
     pub defaultCursor: String,
     pub description: String,
     pub descriptionHtml: String,
-    pub featuredImage: Option<Image>,
+    pub featuredImage: Option<ShopifyImage>,
     pub id: String,
     pub title: String,
     pub handle: String,
