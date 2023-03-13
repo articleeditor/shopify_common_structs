@@ -73,15 +73,15 @@ pub struct ProductPriceRange {
 pub struct ShopifyProduct {
     // pub availablePublicationCount: i32,
     // pub contextualPricing: ProductContextualPricing,
-    pub createdAt: String,
-    pub defaultCursor: String,
-    pub description: String,
-    pub descriptionHtml: String,
+    pub createdAt: Option<String>,
+    pub defaultCursor: Option<String>,
+    pub description: Option<String>,
+    pub descriptionHtml: Option<String>,
     pub featuredImage: Option<ShopifyImage>,
-    pub id: String,
-    pub title: String,
-    pub handle: String,
-    pub priceRange: ProductPriceRange,
+    pub id: Option<String>,
+    pub title: Option<String>,
+    pub handle: Option<String>,
+    pub priceRange: Option<ProductPriceRange>,
 }
 
 #[derive(Deserialize, Serialize, Debug)]
