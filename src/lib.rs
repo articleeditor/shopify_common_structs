@@ -63,6 +63,13 @@ pub struct ShopifyImage {
 
 #[allow(non_snake_case)]
 #[derive(Deserialize, Serialize, Debug)]
+pub struct ProductPriceRange {
+    pub maxVariantPrice: MoneyV2,
+    pub minVariantPrice: MoneyV2,
+}
+
+#[allow(non_snake_case)]
+#[derive(Deserialize, Serialize, Debug)]
 pub struct ShopifyProduct {
     // pub availablePublicationCount: i32,
     // pub contextualPricing: ProductContextualPricing,
@@ -74,6 +81,7 @@ pub struct ShopifyProduct {
     pub id: String,
     pub title: String,
     pub handle: String,
+    pub priceRange: ProductPriceRange,
 }
 
 #[derive(Deserialize, Serialize, Debug)]
