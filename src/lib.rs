@@ -1,28 +1,28 @@
 use serde::{Deserialize, Serialize};
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct MoneyV2 {
     pub amount: f32,
     pub currencyCode: String,
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ProductPriceRangeV2 {
     pub maxVariantPrice: MoneyV2,
     pub minVariantPrice: MoneyV2,
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ProductVariantContextualPricing {
     pub price: f32,
     pub compareAtPrice: Option<f32>,
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ProductContextualPricing {
     pub maxVariantPricing: ProductVariantContextualPricing,
     pub minVariantPricing: ProductVariantContextualPricing,
@@ -30,7 +30,7 @@ pub struct ProductContextualPricing {
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct MetafieldDefintion {
     pub description: Option<String>,
     pub id: String,
@@ -39,7 +39,7 @@ pub struct MetafieldDefintion {
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Metafield {
     pub createdAt: String,
     pub defintion: Option<MetafieldDefintion>,
@@ -52,7 +52,7 @@ pub struct Metafield {
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ShopifyImage {
     pub altText: Option<String>,
     pub height: Option<i32>,
@@ -62,14 +62,14 @@ pub struct ShopifyImage {
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ProductPriceRange {
     pub maxVariantPrice: MoneyV2,
     pub minVariantPrice: MoneyV2,
 }
 
 #[allow(non_snake_case)]
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct ShopifyProduct {
     // pub availablePublicationCount: i32,
     // pub contextualPricing: ProductContextualPricing,
@@ -84,7 +84,7 @@ pub struct ShopifyProduct {
     pub priceRange: Option<ProductPriceRange>,
 }
 
-#[derive(Deserialize, Serialize, Debug)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
 pub struct Edge<T> {
     pub node: T,
     pub cursor: String,
