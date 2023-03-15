@@ -89,3 +89,11 @@ pub struct Edge<T> {
     pub node: T,
     pub cursor: String,
 }
+
+#[allow(non_snake_case)]
+#[derive(Deserialize, Serialize, Debug, Clone)]
+pub struct ShopifyProductInput {
+    pub id: Option<String>,
+    pub title: Option<String>,
+    pub descriptionHtml: Option<String>,
+}
